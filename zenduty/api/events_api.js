@@ -11,7 +11,7 @@ class EventsApi
 
   createEvent(integration_key,payload){
     // payload=  {
-    //     'message':"NodeEvent",
+    //     'message':"EventName",
     //     'summary':"summary",
     //      'alert_type':"critical",
     //     //  'supressed':supressed
