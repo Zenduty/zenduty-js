@@ -1,0 +1,26 @@
+{
+  "name": "zenduty-sdk",
+  "version": "1.0.0",
+  "description": "Zenduty SDK for building an application for Zenduty on a Javascript plateform.",
+  "main": "index.js",
+  "bin": {
+    "zenduty-sdk": "client.js"
+  },
+  "dependencies": {
+    "fetch-ponyfill": "^6.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zenduty/zenduty-js.git"
+  },
+  "author": "Vishva Krishnakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zenduty/zenduty-js/issues"
+  },
+  "homepage": "https://github.com/Zenduty/zenduty-js#readme"
+}
