@@ -1,3 +1,4 @@
+//Store AccessToken
 class Configuration
 {
     constructor(access_token)
