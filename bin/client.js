@@ -16,25 +16,6 @@ api_instance = new schedulesApi.SchedulesApi(apicl)
 
 try
 {
-    // Get Incidents
-    //  api_response = api_instance.createTeam("akash")
-//    payload=  {
-    
-//         "service":"c7fff4c5-2def-41e8-9120-c63f649a825c",
-//         "escalation_policy":"a70244c8-e343-4dd0-8d87-2f767115568a",
-//         "user":null,
-//         "title":"NodeIncident2again",
-//         "summary":"This is for SDK testing."
-//     }
-      
-
-payload={
-    "name":"NodeUpdate",
-         "summary":"updating nodesdk",
-         "time_zone":"Asia/Kolkata",
-         "team":"d4a777db-5bce-419c-a725-420ebb505c54",
- "layers":[]}
-
 api_response = api_instance.deleteSchedule("d4a777db-5bce-419c-a725-420ebb505c54","99a4f9d3-49c7-4dde-9b8f-3efa0333ce87")
 }
 
