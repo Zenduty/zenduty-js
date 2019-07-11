@@ -10,12 +10,19 @@ class EventsApi
     }
 
   createEvent(integration_key,payload){
-    // payload=  {
-    //     'message':"NodeEvent",
-    //     'summary':"summary",
-    //      'alert_type':"critical",
-    //     //  'supressed':supressed
-    //   }
+  //Creates an incident event on zenduty
+        //params 
+        //<str> integration_key: unique key provided for your integration
+        //<dict> payload: contains the details of the event
+        //   'message', 'summary' are required fields of the body
+        //   'alert_type' is "info" by default
+        //   'suppressed' is false by default
+        //   if no entity_id is provided, Zenduty provides one automatically
+        // Sample payload:
+        //          {'message':message,
+        //         'summary':summary,
+        //         'alert_type':alert_type,
+        // 'supressed':supressed}
       this.api_client.call_api(`/api/events/${integration_key}/`,'post',payload)
   }
 }
