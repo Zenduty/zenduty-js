@@ -11,7 +11,7 @@ class TeamsApi{
     }
  getTeams(){ 
      //Returns all the teams and their details from your Zenduty account
-     this.api_client.call_api("/api/account/teams/",'get');
+   return this.api_client.call_api("/api/account/teams/",'get');
 }
 
  createTeam(payload){ 

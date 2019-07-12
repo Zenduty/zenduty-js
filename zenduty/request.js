@@ -33,10 +33,11 @@ request(endpoint, method, body, headers) {
            }
           return response.json();
 
-          }).then(myJson=>{
-          if(method!='delete')
-          console.log(JSON.stringify(myJson))
-          });
+          })
+          // .then(myJson=>{
+          // if(method!='delete')
+          // console.log(JSON.stringify(myJson))
+          // });
     }
     else
     {

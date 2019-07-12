@@ -12,14 +12,18 @@ const ApiClient=require("../zenduty/api_client.js")
 //instantiate ApiClient
 const apicl=new ApiClient.ApiClient('8f06122ae8e09059d3a85314fe877881b4d78608')
 //instantiate API class
-api_instance = new schedulesApi.SchedulesApi(apicl)
+api_instance = new TeamsApi.TeamsApi(apicl)
 
 try
 {
-    api_response = api_instance.deleteSchedule("d4a777db-5bce-419c-a725-420ebb505c54","99a4f9d3-49c7-4dde-9b8f-3efa0333ce87")
+
+    api_instance.getTeams().then(myJson=>{
+        console.log(JSON.stringify(myJson))
+        });
 }
 
 catch(err)
 {
     console.error(err )
 }
+
