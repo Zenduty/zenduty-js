@@ -23,7 +23,7 @@ class EventsApi
         //         'summary':summary,
         //         'alert_type':alert_type,
         // 'supressed':supressed}
-      this.api_client.call_api(`/api/events/${integration_key}/`,'post',payload)
+     return this.api_client.call_api(`/api/events/${integration_key}/`,'post',payload)
   }
 }
 module.exports={EventsApi}

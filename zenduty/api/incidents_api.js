@@ -18,23 +18,23 @@ getIncidents(payload)
            //      'service_ids':[],
            //      'user_ids':[]
            //     }
-    this.api_client.call_api(`/api/incidents/`,'get',payload)
+    return this.api_client.call_api(`/api/incidents/`,'get',payload)
 }
 getIncidentByNumber(incident_number)
 {
     //returns incidents identified by incident_number
-    this.api_client.call_api(`/api/incidents/${incident_number}/`,'get')
+    return this.api_client.call_api(`/api/incidents/${incident_number}/`,'get')
 }
 getIncidentAlerts(incident_number)
 {
        //Returns all alerts of a particular incident
        //params int incident_number: incident number of event
- this.api_client.call_api(`/api/incidents/${incident_number}/alerts/`,'get')
+    return this.api_client.call_api(`/api/incidents/${incident_number}/alerts/`,'get')
 }
 getIncidentNotes(incident_number)
 {
        //Returns IncidentNotes
-    this.api_client.call_api(`/api/incidents/${incident_number}/note/`,'get')
+    return this.api_client.call_api(`/api/incidents/${incident_number}/note/`,'get')
 }
 acknowledgeOrResolveIncident(incident_number,payload)
 {
@@ -44,7 +44,7 @@ acknowledgeOrResolveIncident(incident_number,payload)
        //             'incident_number':12
        //              }
 
-    this.api_client.call_api(`/api/incidents/${incident_number}/`,"PATCH",payload)
+    return this.api_client.call_api(`/api/incidents/${incident_number}/`,"PATCH",payload)
 }
     
 }

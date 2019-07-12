@@ -18,7 +18,7 @@ addMembers (team_id,payload){
         //  "user":"af9eeb60-5acb-406c-971e-3"
         // }
     
-    this.api_client.call_api(`/api/account/teams/${team_id}/members/`,'post',payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/members/`,'post',payload)
 }
 
 

@@ -27,7 +27,7 @@ getTeamDetails(team_id)
 {
     // Returns a team form your zenduty acocunt, identified by id
     // params <str> team_id: unique id of team
-    this.api_client.call_api(`/api/account/teams/${team_id}/`,'get');
+    return this.api_client.call_api(`/api/account/teams/${team_id}/`,'get');
 } 
 
 deleteTeam(team_id) 

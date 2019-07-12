@@ -14,7 +14,7 @@ getServices (team_id)
 {
     //Returns all the services in a team
     //params str team_id: unnique id of team
-    this.api_client.call_api(`/api/account/teams/${team_id}/services/`,'get')
+    return this.api_client.call_api(`/api/account/teams/${team_id}/services/`,'get')
 }
 addService  (team_id,payload)
 {
@@ -31,14 +31,14 @@ addService  (team_id,payload)
         // "acknowledgement_timeout":1,
         // "auto_resolve_timeout":1}
   
-    this.api_client.call_api(`/api/account/teams/${team_id}/services/`,'post',payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/services/`,'post',payload)
 }
 getServiceById (team_id,service_id)
 {
     //Returns a particular service from a  team, identified by id
         //params str team_id: unique id of team
         //params str service_id: unique id of service
-    this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/`,'get')
+    return this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/`,'get')
 }
 updateService (team_id,service_id,payload)
 {
@@ -53,7 +53,7 @@ updateService (team_id,service_id,payload)
         //"acknowledgement_timeout":0,
         //"status":1,
         //"escalation_policy":"5c9b6288-c105-418d-970b-91a93d0e919a"}
-    this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/`,"PATCH",payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/`,"PATCH",payload)
 }
 deleteService (team_id,service_id)
 {

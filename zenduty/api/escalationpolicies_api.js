@@ -14,7 +14,7 @@ getEscalationPoicy(team_id)
 {
     //Returns the escalation policies belonging to one team
     //team_id: unique id of team <str>
-    this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/`,'get')
+   return this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/`,'get')
 }
 createEscalationPolicy(team_id,payload)
 {
@@ -29,14 +29,14 @@ createEscalationPolicy(team_id,payload)
         //     'rules':rules,
         //     'unique_id':unique_id,
         //     'team':team_id}
-        this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/`,'post',payload)
+        return this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/`,'post',payload)
 }
 getEscalationById(team_id,ep_id)
 {    //Returns the escalation policy belongs to one team and has ep_id as its unique id
         //params
         //str team_id: unique id of team
         //str ep_id: unique id of escalation
-        this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/${ep_id}`,'get')
+        return this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/${ep_id}`,'get')
 }
 updateEscalationPolicy(team_id,ep_id,payload)
 {
@@ -53,7 +53,7 @@ updateEscalationPolicy(team_id,ep_id,payload)
         //                             "target_id":"826032d6-7ccd-4d58-b114-f"}],
         //                 "position":1,
         //          "unique_id":"c0dad09b-321b-491e-9c23-f816c7bd0339"}]}
-    this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/${ep_id}/`,'patch',payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/${ep_id}/`,'patch',payload)
 }
 deleteEscalationPolicy(team_id,ep_id)
 {

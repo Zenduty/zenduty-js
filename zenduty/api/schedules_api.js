@@ -11,7 +11,7 @@ class SchedulesApi{
 getSchedule(team_id){
      //Returns the schedules in a particular team, identified by id
       //params <str> team_id: unique id of a team
-    this.api_client.call_api(`/api/account/teams/${team_id}/schedules/`,'get')
+    return this.api_client.call_api(`/api/account/teams/${team_id}/schedules/`,'get')
 }
 
 createSchedule(team_id,payload){
@@ -24,14 +24,14 @@ createSchedule(team_id,payload){
         // "time_zone":"Asia/Kolkata",
         // "team":"d4a777db-5bce-419c-a725-420ebb505c54",
         // "layers":[]}
-    this.api_client.call_api(`/api/account/teams/${team_id}/schedules/`,'post',payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/schedules/`,'post',payload)
 }
 
 getScheduleById(team_id,schedule_id){
    //Returns a particular schedule from a team, identifed by id
         //params <str> team_id: unique id of a team
         //params <str> schedule_id: unique id of schedule
-    this.api_client.call_api(`/api/account/teams/${team_id}/schedules/${schedule_id}/`,'get')
+    return this.api_client.call_api(`/api/account/teams/${team_id}/schedules/${schedule_id}/`,'get')
 }
 
 updateSchedule(team_id,schedule_id,payload){
@@ -47,7 +47,7 @@ updateSchedule(team_id,schedule_id,payload){
         // "team":"d4a777db-5bce-419c-a725-420ebb505c54",
         // "unique_id":"f9b34bd3-818a-4b98-9d8a-04d8bd501cd0",
         // "layers":[]}
-    this.api_client.call_api(`/api/account/teams/${team_id}/schedules/${schedule_id}/`,'patch',payload)
+    return this.api_client.call_api(`/api/account/teams/${team_id}/schedules/${schedule_id}/`,'patch',payload)
 }
 
 deleteSchedule(team_id,schedule_id){
