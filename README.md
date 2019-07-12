@@ -11,7 +11,7 @@ $ npm install zenduty-api
 or you may grab the latest source code from GitHub:
 ```
 $ git clone https://github.com/Zenduty/zenduty-js.git
-< python3 setup.py install>
+<python3 setup.py install>
 ```
 
 ## Contents
