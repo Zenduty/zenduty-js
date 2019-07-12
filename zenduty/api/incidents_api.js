@@ -47,21 +47,21 @@ acknowledgeOrResolveIncident(incident_number,payload)
     return this.api_client.call_api(`/api/incidents/${incident_number}/`,"PATCH",payload)
 }
  createIncident(payload):
-        #Used to create an incident for a particular service, identified by id
-        #params dict payload: contains necessary details for creating incident
-        # Sample payload:
-        #           {"service":"c7fff4c5-2def-41e8-9120-c63f649a825c",
-        #            "escalation_policy":"a70244c8-e343-4dd0-8d87-2f767115568a",
-        #            "user":null,
-        #            "title":"Name of trial",
-        #            "summary":"summary of trial"}
-        #  escalation_policy,service, title and summary are required fields.
-        #  if escalation_policy is not set (set to None then), then assigned_to is required, as follows
-        #           {"service":"b1559a26-c51f-45a1-886d-f6caeaf0fc7e",
-        #            "escalation_policy":null,
-        #            "assigned_to":"826032d6-7ccd-4d58-b114-f",
-        #            "title":"Name of trial",
-        #            "summary":"Summary of trial"}
+        //Used to create an incident for a particular service, identified by id
+        //params dict payload: contains necessary details for creating incident
+        // Sample payload:
+        //           {"service":"c7fff4c5-2def-41e8-9120-c63f649a825c",
+        //            "escalation_policy":"a70244c8-e343-4dd0-8d87-2f767115568a",
+        //            "user":null,
+        //            "title":"Name of trial",
+        //            "summary":"summary of trial"}
+        //  escalation_policy,service, title and summary are required fields.
+        //  if escalation_policy is not set (set to None then), then assigned_to is required, as follows
+        //           {"service":"b1559a26-c51f-45a1-886d-f6caeaf0fc7e",
+        //            "escalation_policy":null,
+        //            "assigned_to":"826032d6-7ccd-4d58-b114-f",
+        //            "title":"Name of trial",
+        //            "summary":"Summary of trial"}
        return this.api_client.call_api(''/api/incidents/','post',payload)
     
 }
