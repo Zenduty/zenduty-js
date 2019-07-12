@@ -35,9 +35,9 @@ payload = {"service":"c7fff4c5-2def-41e8-9120-c63f649a825c",
         "user":null,
         "title":"Name of trial",
         "summary":"summary of trial"}
-response = api_obj.create_incident(payload)
-console.log(response.data)
-console.log(response.status_code)
+api_obj.create_incident(payload).then(myJson=>{
+        console.log(JSON.stringify(myJson))
+        });
 ```
 Refer the comments under each function for a detailed description of it's parameters.
 <It is important to note that each function returns a urllib3.response.HTTPResponse object.>
