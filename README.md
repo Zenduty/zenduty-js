@@ -6,7 +6,7 @@ Javascript SDK to communicate with zenduty endpoints
 
 Installation can be done through npm, as follows:
 ```
-$ npm install zenduty-api
+$ npm install zenduty-sdk
 ```
 or you may grab the latest source code from GitHub:
 ```
