@@ -1,9 +1,8 @@
 {
   "name": "zenduty-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zenduty SDK for building an application for Zenduty on a Javascript plateform.",
   "main": "bin/client.js",
-
   "dependencies": {
     "fetch-ponyfill": "^6.1.0"
   },
