@@ -1,12 +1,12 @@
-// import ApiClient from zenduty.api_client 
+// import ApiClient from zenduty.api_client
 const ApiClient=require("../api_client")
-class ServicesApi{
+module.exports=class ServicesApi{
   constructor(api_client=null){
 
     if (api_client==null)
     {
             api_client=ApiClient()
-    }  
+    }
         this.api_client = api_client
     }
 
@@ -30,7 +30,7 @@ addService  (team_id,payload)
         // "escalation_policy":"5c9b6288-c105-418d-970b-91a93d0e919a",
         // "acknowledgement_timeout":1,
         // "auto_resolve_timeout":1}
-  
+
     return this.api_client.call_api(`/api/account/teams/${team_id}/services/`,'post',payload)
 }
 getServiceById (team_id,service_id)
@@ -43,7 +43,7 @@ getServiceById (team_id,service_id)
 updateService (team_id,service_id,payload)
 {
   //Updates the existing service in a team
-        //params 
+        //params
         //<str> team_id: unique id of team
         //<str> service_id: unique id of service
         //<dict> body: contains the updated details of services
@@ -58,10 +58,9 @@ updateService (team_id,service_id,payload)
 deleteService (team_id,service_id)
 {
   //Deletes a particular service from a team
-        //params 
+        //params
         //<str> team_id: unique id of team
         //<str> service_id: unnique id of service
     this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/`,'delete')
 }
 }
-module.exports={ServicesApi}

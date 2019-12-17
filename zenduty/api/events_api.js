@@ -1,6 +1,6 @@
 // import ApiClient from zenduty.api_client
 const ApiClient = require("../api_client");
-class EventsApi {
+module.exports=class EventsApi {
   constructor(api_client = null) {
     if (api_client == null) api_client = ApiClient();
 
@@ -28,4 +28,4 @@ class EventsApi {
     );
   }
 }
-module.exports = { EventsApi };
+

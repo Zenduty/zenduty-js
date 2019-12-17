@@ -1,10 +1,10 @@
-// import ApiClient from zenduty.api_client 
+// import ApiClient from zenduty.api_client
 const ApiClient=require("../api_client")
-class IntegrationsApi{
+module.exports=class IntegrationsApi{
 	constructor(api_client=null){
         if (api_client==null)
             api_client=ApiClient()
-       
+
         this.api_client = api_client
     }
 getIntegrationInService(team_id,service_id)
@@ -17,7 +17,7 @@ getIntegrationInService(team_id,service_id)
 
 createIntegration(team_id,service_id,payload)
 {
-	//Creates Integration in a service 
+	//Creates Integration in a service
 	//params <str> team_id: unique id of team
         //params <str> service_id: unique id of service
 	//params <dict> payload: contains the details of the new integration
@@ -29,7 +29,7 @@ createIntegration(team_id,service_id,payload)
     return this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/integrations/`,'post',payload)
 }
 getIntegrationById(team_id,service_id,integration_id){
-	
+
 	//Returns an integration belonging to a service in a team, identified by id
         //params <str> team_id: unique id of team
         //params <str> service_id: unique id of service
@@ -46,4 +46,4 @@ getAlertsInIntegration(team_id,service_id,integration_id)
     this.api_client.call_api(`/api/account/teams/${team_id}/services/${service_id}/integrations/${integration_id}/alerts/`,'get')
 }
 }
-module.exports={IntegrationsApi}
+

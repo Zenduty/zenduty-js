@@ -1,6 +1,6 @@
 {
   "name": "zenduty-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zenduty SDK for building an application for Zenduty on a Javascript plateform.",
   "main": "index.js",
   "dependencies": {

@@ -1,10 +1,10 @@
-// import ApiClient from zenduty.api_client 
+// import ApiClient from zenduty.api_client
 const ApiClient=require("../api_client")
-class SchedulesApi{
+module.exports=class SchedulesApi{
    constructor(api_client=null){
         if (api_client==null)
             api_client=ApiClient()
-       
+
         this.api_client = api_client
 
 }
@@ -58,4 +58,4 @@ deleteSchedule(team_id,schedule_id){
 }
 
 }
-module.exports={SchedulesApi}
+

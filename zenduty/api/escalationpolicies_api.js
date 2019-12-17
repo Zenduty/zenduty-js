@@ -1,7 +1,7 @@
-// import ApiClient from zenduty.api_client 
+// import ApiClient from zenduty.api_client
 const ApiClient=require("../api_client")
 
-class EscalationPoliciesApi{
+module.exports=class EscalationPoliciesApi{
     constructor(api_client=None)
     {
         if (api_client == null){
@@ -9,7 +9,7 @@ class EscalationPoliciesApi{
         }
         this.api_client = api_client
     }
-    
+
 getEscalationPoicy(team_id)
 {
     //Returns the escalation policies belonging to one team
@@ -19,7 +19,7 @@ getEscalationPoicy(team_id)
 createEscalationPolicy(team_id,payload)
 {
         //Creates an escalation policy for one team
-        //params 
+        //params
         //str team_id: unique id of team
         //dict payload: contains the required details for creating escalation policy
         //Sample payload=
@@ -41,7 +41,7 @@ getEscalationById(team_id,ep_id)
 updateEscalationPolicy(team_id,ep_id,payload)
 {
     //Updates escalation policy, identified by ep_id
-        //params 
+        //params
         //str team_id: unique id of team
         //str ep_id: unqiue id of escalation policy
         //dict body: contains all the updated values
@@ -57,12 +57,10 @@ updateEscalationPolicy(team_id,ep_id,payload)
 }
 deleteEscalationPolicy(team_id,ep_id)
 {
-    //Deletes escalation policy, identified by ep_id in a team 
+    //Deletes escalation policy, identified by ep_id in a team
     //params
     //str team_id: unique id of team
     //str ep_id: unqiue id of escalation policy
     this.api_client.call_api(`/api/account/teams/${team_id}/escalation_policies/${ep_id}/`,'delete')
 }
 }
-    
-module.exports={EscalationPoliciesApi}

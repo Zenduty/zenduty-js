@@ -1,7 +1,7 @@
 //importing files
 const FetchClientObject=require("./request")
 const Configuration=require("./configuration")
-class ApiClient
+module.exports=class ApiClient
 {
     constructor(access_token){
         this.configuration = new Configuration.Configuration(access_token)
@@ -15,7 +15,4 @@ class ApiClient
         //making the request through FETCHClientObject
         return this.fetch_client.request(url,method,body,headers)
     }
-}
-module.exports={
-    ApiClient
 }

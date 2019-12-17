@@ -1,6 +1,6 @@
 // import ApiClient from zenduty.api_client
 const ApiClient = require("../api_client");
-class IncidentsApi {
+module.exports = class IncidentsApi {
   constructor(api_client = null) {
     if (api_client == null) api_client = ApiClient();
     this.api_client = api_client;
@@ -72,4 +72,3 @@ class IncidentsApi {
     return this.api_client.call_api("/api/incidents/", "post", payload);
   }
 }
-module.exports = { IncidentsApi };
