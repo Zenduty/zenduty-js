@@ -25,7 +25,7 @@ Before you begin making use of the SDK, make sure you have your Zenduty Access T
 
 You can then import the package into your JavaScript script.
 ```
-const zenduty=require('zenduty')
+const zenduty=require('zenduty-sdk')
 ```
 Based on the endpoint you want to communicate with, create an object of the required class. For example, to create an incident:
 ```
