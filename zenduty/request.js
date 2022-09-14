@@ -1,6 +1,6 @@
 //import fetch for performing various requests to api
 const {fetch}=require("fetch-ponyfill")();
-const conf=new require("./configuration")
+
 class FetchClientObject {
 
      constructor () {
